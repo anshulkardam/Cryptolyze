@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         gold: '#FFD700',
+        grid: '#141414',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
