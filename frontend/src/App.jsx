@@ -1,70 +1,24 @@
 
-import AnchorTemporaryDrawer from "./components/LandingDrawer"
-import TemporaryDrawer from "./components/LandingDrawer"
-import { LandingHeader } from "./components/LandingHeader"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { LandingPage } from "./pages/LandingPage"
+import { Dashboard } from "./pages/Dashboard"
 
 function App() {
 
+  return (
 
-  return <div> 
-  <div className="bg-black min-h-screen">
-        <LandingHeader />
-      {/* <div className="font-poppins font-semibold selection:bg-red-500 selection:text-yellow-500">
-        <LandingFooter />
-        </div> */}
-        <div className="text-white">
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        </div>     
-  </div>
-  </div>
-                  
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} ></Route>
+        <Route path="/dashboard" element={<Dashboard />} ></Route>
+      </Routes>
+    </BrowserRouter>
+
+
+  )
+
 }
 
 export default App
+
+
