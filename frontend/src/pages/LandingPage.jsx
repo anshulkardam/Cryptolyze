@@ -1,5 +1,6 @@
 import { InfoCard } from "../components/InfoCard"
 import { LandingHeader } from "../components/LandingHeader"
+import Widget from "../components/Widget"
 
 export const LandingPage =() => {
 
@@ -7,6 +8,7 @@ export const LandingPage =() => {
     <div className="bg-black min-h-screen">
           <LandingHeader />
           <InfoCard />
+         
         {/* <div className="font-poppins font-semibold selection:bg-red-500 selection:text-yellow-500">
           <LandingFooter />
           </div> */}

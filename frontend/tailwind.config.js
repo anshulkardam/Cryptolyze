@@ -6,16 +6,22 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        gold: '#FFD700',
-        grid: '#141414',
+      fontSize: {
+        '8.5xl': ['7.45rem', { lineHeight: '1' }], 
       },
-      fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+      lineHeight: {
+        'custom': '1',
+      },
+        colors: {
+          gold: '#FFD700',
+          grid: '#141414',
+        },
+        fontFamily: {
+          montserrat: ['Montserrat', 'sans-serif'],
+          poppins: ['Poppins', 'sans-serif'],
+        },
       },
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  }
 

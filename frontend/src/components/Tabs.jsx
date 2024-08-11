@@ -7,6 +7,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import { useState } from 'react';
 import { lightBlue, red } from '@mui/material/colors';
 import { GridView } from './GridView';
+import { ListView } from './ListView';
 
 export default function LabTabs({coindata}) {
   const [value, setValue] = useState('1');
@@ -25,7 +26,7 @@ export default function LabTabs({coindata}) {
           </TabList>
         </Box>
         <TabPanel value="1">
-        <div className='text-white flex justify-center flex-wrap p-4 gap-12 '>
+        <div className='flex justify-center flex-wrap p-4 gap-12 '>
             {coindata.map((coin,i)=> {
                    return <GridView coin={coin} key={i} />
             })}
@@ -33,7 +34,11 @@ export default function LabTabs({coindata}) {
         </TabPanel>
         
         <TabPanel value="2">
-        <div className='text-white'>map2</div>
+        <table className="w-full mt-4">
+             {coindata.map((coin,i)=> {
+                   return <ListView coin={coin} key={i} />
+            })}
+        </table>
         </TabPanel>
       </TabContext>
     </Box>
