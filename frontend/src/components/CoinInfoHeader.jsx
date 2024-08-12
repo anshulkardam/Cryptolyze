@@ -3,7 +3,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Tooltip from '@mui/material/Tooltip';
 import { motion } from 'framer-motion';
 export const CoinInfoHeader = ({ coin }) => {
-   
+
     return <tbody className=''>
         <tr className='w-full'>
             <td className="text-white px-12 pt-10" >
@@ -12,8 +12,8 @@ export const CoinInfoHeader = ({ coin }) => {
                         <div className="w-[75px] h-[75px]">
                             <img src={coin.image.large} />
                         </div>
-                        <div className="flex flex-col pl-4 pt-1.5">
-                            <div className="text-3xl font-semibold font-montserrat">{coin.name}</div>
+                        <div className="flex flex-col pl-4 pt-2">
+                            <div className="text-2xl font-semibold font-montserrat">{coin.name}</div>
                             <div className="text-md font-medium text-slate-300 font-poppins">{coin.symbol.toUpperCase()}</div>
                         </div>
                     </div>
@@ -51,6 +51,20 @@ export const CoinInfoHeader = ({ coin }) => {
                         <Tooltip title="Current Price" placement="left-start">
                             <div className=' text-2xl font-montserrat font-bold text-green-500'>
                                 ${coin.market_data.current_price.usd.toLocaleString()}
+                            </div>
+                        </Tooltip>
+                    </div>
+                    <div className='flex-1'>
+                        <Tooltip title="Highest 24Hrs" placement="left-start">
+                            <div className=' text-2xl font-montserrat font-semibold mt-4 text-yellow-500'>
+                                ${coin.market_data.high_24h.usd.toLocaleString()}
+                            </div>
+                        </Tooltip>
+                    </div>
+                    <div className='flex-1'>
+                        <Tooltip title="Lowest 24Hrs" placement="left-start">
+                            <div className=' text-2xl font-montserrat font-semibold mt-4 text-yellow-500'>
+                                ${coin.market_data.low_24h.usd.toLocaleString()}
                             </div>
                         </Tooltip>
                     </div>

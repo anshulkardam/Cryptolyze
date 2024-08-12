@@ -13,6 +13,7 @@ import BasicSelect from "../components/SelectComp";
 import { setChartData } from "../functions/setChartData";
 import ToggleButton from "../components/ChartToggle";
 import ChartToggleButton from "../components/ChartToggle";
+import { LandingFooter } from "../components/LandingFooter";
 
 export const CoinInfo = () => {
 
@@ -126,5 +127,6 @@ export const CoinInfo = () => {
             </div>
         </div>
         <CoinInfoDesc coin={coininfo} />
+        <LandingFooter />
     </div>
 }

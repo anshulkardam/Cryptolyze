@@ -12,17 +12,17 @@ export default function ChartToggleButton({toggle,handleToggleChange}) {
       onChange={handleToggleChange}
       sx={{
           "&.Mui-selected": {
-          color: "blue",
+          color: "#f57c00",
         },
-        borderColor: 'blue',
+        borderColor: '',
         border:"unset",
         "& .MuiToggleButtonGroup-grouped": {
-          color: "blue",
+          color: "#90caf9",
           border: "1px solid",
           borderColor: "unset"
         },
         "& .MuiToggleButton-standard": {
-            color: "#blue",
+            color: "#f57c00",
         },
       }}
     >

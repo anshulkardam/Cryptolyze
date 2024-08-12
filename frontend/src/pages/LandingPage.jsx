@@ -2,66 +2,12 @@ import { InfoCard } from "../components/InfoCard"
 import { LandingHeader } from "../components/LandingHeader"
 import Widget from "../components/Widget"
 
-export const LandingPage =() => {
+export const LandingPage = () => {
 
-    return <div> 
+  return <div>
     <div className="bg-black min-h-screen">
-          <LandingHeader />
-          <InfoCard />
-         
-        {/* <div className="font-poppins font-semibold selection:bg-red-500 selection:text-yellow-500">
-          <LandingFooter />
-          </div> */}
-          <div className="text-white">
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          <div>hi</div>
-          </div>     
+      <LandingHeader />
+      <InfoCard />
     </div>
-    </div>
+  </div>
 }

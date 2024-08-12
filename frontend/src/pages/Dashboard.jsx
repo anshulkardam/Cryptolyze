@@ -6,6 +6,7 @@ import axios from 'axios'
 import { SearchBar } from "../components/SearchBar";
 import PaginationComp from "../components/PaginationComp";
 import CircularWithValueLabel from "../components/Loader";
+import { LandingFooter } from "../components/LandingFooter";
 export const Dashboard = () => {
     const { user } = useUser();
     const [coindata, setCoindata] = useState([])
@@ -49,5 +50,6 @@ export const Dashboard = () => {
         {!search && (
         <PaginationComp page={page} handlePageChange={handlePageChange} />
         )}
+        <LandingFooter />
         </div>
 }
