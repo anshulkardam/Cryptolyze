@@ -20,7 +20,7 @@ export const CoinInfo = () => {
     const { id } = useParams();
     const [coininfo, setCoininfo] = useState({})
     const [loading, setLoading] = useState(true)
-    const [days, setDays] = useState(60)
+    const [days, setDays] = useState(365)
     const [chart, setChart] = useState({})
     const [toggle, setToggle] = useState('prices');
 
@@ -47,11 +47,11 @@ export const CoinInfo = () => {
                     datasets: [
                         {
                             data: pricedata.map((price) => price[1]),
-                            borderColor: "#3a80e9",
+                            borderColor: "#224422",
                             borderWidth: 2,
                             fill: true,
                             tension: 0.25,
-                            backgroundColor: "rgba(58,128,233,0.1)",
+                            backgroundColor: "rgba(100, 220, 150, 0.1)",
                             pointRadius: 0,
                         }
                     ],

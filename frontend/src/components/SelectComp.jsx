@@ -7,8 +7,8 @@ import Select from '@mui/material/Select';
 export default function BasicSelect({days, handledayChange}) {
 
   return (
-    <div className='flex pb-5 ml-6'>
-        <p className='text-white pt-2 pr-4 font-montserrat font-semibold'>Change In The Last</p>
+    <div className='flex pb-5 ml-6 items-center'>
+        <p className='text-white pr-4 font-montserrat font-semibold font-lg'>Change In The Past</p>
         <InputLabel id="demo-simple-select-label"></InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -35,8 +35,9 @@ export default function BasicSelect({days, handledayChange}) {
           <MenuItem value={7}>7 Days</MenuItem>
           <MenuItem value={30}>30 Days</MenuItem>
           <MenuItem value={60}>60 Days</MenuItem>
-          <MenuItem value={90}>90 Days</MenuItem>
-          <MenuItem value={90}>120 Days</MenuItem>
+          <MenuItem value={90}>3 Months</MenuItem>
+          <MenuItem value={180}>6 Months</MenuItem>
+          <MenuItem value={365}>1 Year</MenuItem>
         </Select>
     </div>
   );

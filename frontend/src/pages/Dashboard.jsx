@@ -7,6 +7,7 @@ import { SearchBar } from "../components/SearchBar";
 import PaginationComp from "../components/PaginationComp";
 import CircularWithValueLabel from "../components/Loader";
 import { LandingFooter } from "../components/LandingFooter";
+import { getCoinData } from "../functions/getCoinData";
 export const Dashboard = () => {
     const { user } = useUser();
     const [coindata, setCoindata] = useState([])
@@ -29,15 +30,16 @@ export const Dashboard = () => {
                                          item.name.toLowerCase().includes(search.toLowerCase()) ||
                                          item.symbol.toLowerCase().includes(search.toLowerCase()));
     useEffect(()=> {
-        axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
-         .then(res=> {
-            setCoindata(res.data)
-            setCoinpagedata(res.data.slice(0, 12))
-            setLoading(false)
-         }).catch(error => {
-            console.error("There was an error fetching the data:", error);
-            setLoading(false); })
+        fetchCoin();
     },[])
+    const fetchCoin = async () => {
+        const mycoins = await getCoinData();
+        if(mycoins) {
+            setCoindata(mycoins)
+            setCoinpagedata(mycoins.slice(0,12))
+            setLoading(false);
+        }
+       }
     if(loading){
         return <div className="bg-black min-h-screen">
             <CircularWithValueLabel />
