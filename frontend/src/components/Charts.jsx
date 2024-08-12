@@ -16,7 +16,24 @@ function Chart({ chartData, multiAxis, toggle }) {
       intersect: false,
     },
     scales: {
-        y: {
+        y1: {
+            type: "linear",
+            display: "true",
+            position: "left",
+            ticks: {
+                callback: function(value,index,ticks){
+                    if(toggle == "prices"){
+                         return "$" + value.toLocaleString();
+                    } else {
+                        return  "$" + ConvertNumbers(value);
+                    }
+                }
+            }
+        },
+        y2: {
+            type: "linear",
+            display: "true",
+            position: "right",
             ticks: {
                 callback: function(value,index,ticks){
                     if(toggle == "prices"){

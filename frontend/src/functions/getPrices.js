@@ -2,7 +2,12 @@ import axios from "axios"
 // prices,marketcap and volume data
 export const getPrices = async (id,days,types) => {
     try {
-   const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}&interval=daily&precision=2`)
+   const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}&interval=daily&precision=2`, {
+    headers : {
+        'Accept' : 'application/json', 
+        'x-cg-demo-api-key': 'CG-8qqdG1Txd8KiZq9uPSpMdcgo'
+    }
+    })
         return response.data[types];
     } catch (error) {
         console.error("Error getting the data:", error);

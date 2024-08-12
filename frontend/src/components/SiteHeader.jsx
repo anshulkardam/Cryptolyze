@@ -15,8 +15,11 @@ export const SiteHeader = () => {
                 </div>
                 </Link>
             </div>
-            <div className="hidden md:flex md:text-lg md:text-slate-600 md:font-poppins md:font-semibold md:pr-8 md:pt-1 ">
-                <div className=" pt-2 pr-5">
+            <div className="flex">
+                <Link to={'/compare'} >
+                <div className="font-poppins mr-32 text-yellow-600 text-lg font-semibold pt-5 ">Compare</div>
+                </Link>
+                <div className=" pt-3 pr-12">
                     <SignedIn>
                         <div className="pt-2 ">
                         <UserButton />
