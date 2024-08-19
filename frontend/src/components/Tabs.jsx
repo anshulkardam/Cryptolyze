@@ -26,7 +26,7 @@ export default function LabTabs({coindata}) {
           </TabList>
         </Box>
         <TabPanel value="1">
-        <div className='flex justify-center flex-wrap p-4 gap-12 '>
+        <div className='flex justify-center flex-wrap p-3 gap-4 '>
             {coindata.map((coin,i)=> {
                    return <GridView coin={coin} key={i} />
             })}

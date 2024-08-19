@@ -1,10 +1,18 @@
 import { Link, useNavigate } from "react-router-dom"
 import { Button } from "./Button"
 import AnchorTemporaryDrawer from "./LandingDrawer"
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, SignInButton, SignUpButton, useAuth, UserButton } from "@clerk/clerk-react";
+import { useEffect } from "react";
 
 export const LandingHeader = () => {
+    const { isSignedIn } = useAuth();
     const navigate = useNavigate();
+    useEffect(() => {
+        if (isSignedIn) {
+          navigate('/dashboard'); 
+        }
+      }, [isSignedIn, navigate]);
+
     return <div className=" sticky z-50 top-0 bg-black cursor-pointer pb-4">
         <div className="flex justify-between pl-12">
             <div className="flex text-4xl pt-4 font-montserrat font-bold">
@@ -22,7 +30,7 @@ export const LandingHeader = () => {
                 <div className=" pt-2 pr-5">
                     <SignedOut>
                         <div className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:outline-none font-semibold rounded-lg text-sm px-6 py-2.5 text-center me-2 dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-500">
-                        <SignInButton mode="modal" forceRedirectUrl={'/dashboard'} />
+                        <SignInButton mode="modal" />
                         </div>
                     </SignedOut>
 
