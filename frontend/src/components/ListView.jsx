@@ -6,7 +6,7 @@ export const ListView = ({ coin }) => {
     return <tbody>
         <tr className='w-full'>
             <td className="text-white px-12 pt-10" >
-                <td className='flex justify-between'>
+                <div className='flex justify-between'>
                     <div className="flex flex-1 ml-12 ">
                         <Link to={`/coin/${coin.id}`} >
                             <div className="w-11 h-11 pt-1">
@@ -62,7 +62,7 @@ export const ListView = ({ coin }) => {
                             ${coin.total_volume.toLocaleString()}
                         </div>
                     </Tooltip>
-                </td>
+                </div>
             </td>
         </tr>
     </tbody>

@@ -26,8 +26,8 @@ export const InfoCard = () => {
             <div className="mt-4 space-x-7 flex">
                 <Link to={"/dashboard"}>
                     <button type="button" className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:outline-none font-semibold rounded-lg text-sm px-12 py-2.5 text-center inline-flex items-center me-2 mb-2 dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-500">Dashboard
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                         </svg>
                     </button>
                 </Link>

@@ -117,10 +117,12 @@ export const CoinInfo = () => {
         <table className="w-full">
             <CoinInfoHeader coin={coininfo} />
         </table>
+        <div>hi</div>
         <div className=" pl-[40px] pr-[40px] pt-6">
             <div className="w-full h-auto bg-grid rounded-xl border-2 border-black p-4">
                 <BasicSelect days={days} handledayChange={handledayChange} />
                 <ChartToggleButton toggle={toggle} handleToggleChange={handleToggleChange} />
+               
                 <div className="">
                     <Chart chartData={chart} toggle={toggle}/>
                 </div>

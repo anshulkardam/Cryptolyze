@@ -83,6 +83,7 @@ export const Compare = () => {
             try {
                 const coindata = await getData(event.target.value);
                 Setcrypto1data(coindata)
+                setLoading(false)
             } catch (error) {
                 console.error("Error in getCoinData:", error);
             }

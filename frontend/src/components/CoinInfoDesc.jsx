@@ -2,7 +2,8 @@ import { useRef, useEffect } from 'react';
 
 export const CoinInfoDesc = ({ coin }) => {
    
-    const contentRef = useRef(null);
+   
+  const contentRef = useRef(null);
     useEffect(() => {
       if (contentRef.current) {
         const links = contentRef.current.querySelectorAll('a');
