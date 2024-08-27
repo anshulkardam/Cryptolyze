@@ -24,7 +24,7 @@ export const InfoCard = () => {
                     className="text-yellow-500 text-8xl mt-2">Real Time.</motion.h1>
             </div>
             <div className="text-zinc-500 font-poppins font-medium text-md pt-1">Your compass for real-time crypto tracking. Measure and analyze market movements as they happen.</div>
-            <div className="mt-4 space-x-7 flex">
+            {/* <div className="mt-4 space-x-7 flex">
                 <SignedOut>
                 <SignInButton mode="modal">
                     <div type="button" className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:outline-none font-semibold rounded-lg text-sm px-12 py-2.5 text-center inline-flex items-center me-2 mb-2 dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-500">Dashboard
@@ -36,7 +36,7 @@ export const InfoCard = () => {
                     </SignInButton>
                 </SignedOut>
                 <button type="button" className="font-montserrat text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900  font-semibold rounded-lg text-sm px-6 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600  ">Share</button>
-            </div>
+            </div> */}
             <div className="w-full mt-2">
                 <Widget />
                 <WidgetChart />
