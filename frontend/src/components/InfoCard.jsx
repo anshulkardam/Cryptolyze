@@ -3,7 +3,6 @@ import { CoinScene } from "./Model"
 import { Link } from "react-router-dom"
 import Widget from "./Widget"
 import WidgetChart from "./WidgetChart"
-import { SignedOut, SignInButton } from "@clerk/clerk-react"
 
 export const InfoCard = () => {
     return <div className="text-white flex h-screen">
@@ -24,19 +23,16 @@ export const InfoCard = () => {
                     className="text-yellow-500 text-8xl mt-2">Real Time.</motion.h1>
             </div>
             <div className="text-zinc-500 font-poppins font-medium text-md pt-1">Your compass for real-time crypto tracking. Measure and analyze market movements as they happen.</div>
-            {/* <div className="mt-4 space-x-7 flex">
-                <SignedOut>
-                <SignInButton mode="modal">
-                    <div type="button" className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:outline-none font-semibold rounded-lg text-sm px-12 py-2.5 text-center inline-flex items-center me-2 mb-2 dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-500">Dashboard
-                     
+            <div className="mt-4 space-x-7 flex">
+                <Link to={"/dashboard"}>
+                    <button type="button" className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:outline-none font-semibold rounded-lg text-sm px-12 py-2.5 text-center inline-flex items-center me-2 mb-2 dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-500">Dashboard
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                         </svg>
-                    </div>
-                    </SignInButton>
-                </SignedOut>
+                    </button>
+                </Link>
                 <button type="button" className="font-montserrat text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900  font-semibold rounded-lg text-sm px-6 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600  ">Share</button>
-            </div> */}
+            </div>
             <div className="w-full mt-2">
                 <Widget />
                 <WidgetChart />
