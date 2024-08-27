@@ -5,7 +5,6 @@ import { Dashboard } from "./pages/Dashboard"
 import { Compare } from "./pages/Compare"
 import { CoinInfo } from "./pages/CoinInfo"
 import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/clerk-react"
-import { Sig } from "./pages/signin"
 import { Watchlist } from "./pages/Watchlist"
 
 function App() {
