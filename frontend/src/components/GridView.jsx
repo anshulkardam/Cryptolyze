@@ -51,7 +51,7 @@ export const GridView = ({ coin }) => {
                             <div className="text-xs text-slate-300 font-poppins">{coin.name}</div>
                         </Link>
                     </div>
-                    <button onClick={handleToggleWatchlist} className={`ml-4 p-2 font-semibold font-montserrat border-2 ${isInWatchlist ? 'bg-yellow-500' : ''}`} >
+                    <button onClick={handleToggleWatchlist} className={`rounded-lg ml-4 p-2 font-semibold font-montserrat border-2 ${isInWatchlist ? 'bg-yellow-500' : ''}`} >
                         {isInWatchlist ? '-' : '+'}
                     </button>
                 </div>
