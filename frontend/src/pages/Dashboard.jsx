@@ -1,4 +1,4 @@
-import { useUser } from "@clerk/clerk-react"
+ 
 import LabTabs from "../components/Tabs";
 import { SiteHeader } from "../components/SiteHeader";
 import { useEffect, useState } from "react";
@@ -9,7 +9,7 @@ import CircularWithValueLabel from "../components/Loader";
 import { LandingFooter } from "../components/LandingFooter";
 import { getCoinData } from "../functions/getCoinData";
 export const Dashboard = () => {
-    const { user } = useUser();
+  
     const [coindata, setCoindata] = useState([])
     const [coinpagedata, setCoinpagedata] = useState([])
     const [search, setSearch] = useState("")

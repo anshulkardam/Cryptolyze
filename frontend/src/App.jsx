@@ -14,49 +14,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} ></Route>
-        <Route path="/dashboard" element={
-          <>
-            <SignedIn>
-              <Dashboard />
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </>
-        } >
+        <Route path="/dashboard" element={<Dashboard />} >
         </Route>
 
-        <Route path="/compare" element={
-          <>
-            <SignedIn>
-              <Compare />
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </>
-        } ></Route>
-        <Route path="/coin/:id" element={
-          <>
-            <SignedIn>
-              <CoinInfo />
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </>
-        } ></Route>
+        <Route path="/compare" element={<Compare />} ></Route>
+        <Route path="/coin/:id" element={<CoinInfo />} ></Route>
 
-        <Route path="/watchlist" element={
-          <>
-            <SignedIn>
-              <Watchlist />
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </>
-        } ></Route>
+        <Route path="/watchlist" element={<Watchlist />} ></Route>
       </Routes>
     </BrowserRouter >
 

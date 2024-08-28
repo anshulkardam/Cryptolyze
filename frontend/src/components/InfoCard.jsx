@@ -31,7 +31,9 @@ export const InfoCard = () => {
                         </svg>
                     </button>
                 </Link>
-                <button type="button" className="font-montserrat text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900  font-semibold rounded-lg text-sm px-6 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600  ">Share</button>
+                <Link  to={'https://www.linkedin.com/in/anshul-kardam-057841302/'}>
+                                <button type="button" className="font-montserrat text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900  font-semibold rounded-lg text-sm px-6 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600  ">Share</button>
+                </Link>
             </div>
             <div className="w-full mt-2">
                 <Widget />

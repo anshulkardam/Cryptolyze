@@ -1,17 +1,15 @@
 import { Link, useNavigate } from "react-router-dom"
-import { Button } from "./Button"
-import AnchorTemporaryDrawer from "./LandingDrawer"
-import { SignedIn, SignedOut, SignInButton, SignUpButton, useAuth, UserButton } from "@clerk/clerk-react";
-import { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
+import AnchorTemporaryDrawer from "./LandingDrawer"
+ 
 export const LandingHeader = () => {
-    const { isSignedIn } = useAuth();
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (isSignedIn) {
-          navigate('/dashboard'); 
-        }
-      }, [isSignedIn, navigate]);
+     
+     function notify(){
+        toast.error("clerk disabled because of issues rn")
+     }
+    
 
     return <div className=" sticky z-50 top-0 bg-black cursor-pointer pb-4">
         <div className="flex justify-between pl-12">
@@ -28,17 +26,12 @@ export const LandingHeader = () => {
             </div>
             <div className="hidden md:flex md:text-lg md:text-slate-600 md:font-poppins md:font-semibold md:pr-8 md:pt-1 ">
                 <div className=" pt-2 pr-5">
-                    <SignedOut>
-                        <div className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:outline-none font-semibold rounded-lg text-sm px-6 py-2.5 text-center me-2 dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-500">
-                        <SignInButton mode="modal" />
+                     
+                        <div onClick={notify} className="text-white hover:text-white border border-blue-700 hover:bg-blue-800 focus:outline-none font-semibold rounded-lg text-sm px-6 py-2.5 text-center me-2 dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-500">
+                      Sign in
                         </div>
-                    </SignedOut>
+                   <ToastContainer/>
 
-                    <SignedIn>
-                        <div className="pt-2 ">
-                        <UserButton />
-                        </div>
-                    </SignedIn>
                 </div>
                 <div className="hover:text-white pt-4">
                     About Us
