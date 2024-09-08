@@ -43,7 +43,7 @@ export const Savedlist = () => {
           ))}
         </div>
       ) : (
-        <p className="text-white">Your watchlist is empty.</p>
+        <p className="text-white text-center  text-xl font-semibold font-montserrat mt-32">Your watchlist is empty.</p>
       )}
 
     </div>

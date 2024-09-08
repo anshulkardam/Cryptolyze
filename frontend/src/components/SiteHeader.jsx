@@ -1,13 +1,15 @@
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton, useUser } from "@clerk/clerk-react";
+
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import AnchorTemporaryDrawer from "./LandingDrawer";
 export const SiteHeader = () => {
-    const userdata = useUser();
-    const name = userdata.user.username;
+
     const notify = () => {
         toast.info('Coming Soon!');
+    };
+    const notifyprob = () => {
+        toast.error('clerk disabled rn because of issues');
     };
     return <div className=" sticky z-50 top-0 bg-black cursor-pointer pb-4">
         <div className="flex justify-between pl-12">
@@ -21,7 +23,7 @@ export const SiteHeader = () => {
                         <span className="text-white text-x">.</span>
                     </div>
                 </Link>
-                <div className="flex">
+                <div className="hidden lg:flex">
                     <div className="flex justify-center items-center">
                         <Link to={'/compare'} >
                             <div className="font-montserrat ml-20 mt-2  text-yellow-400 text-base font-semibold  ">Compare Coins</div>
@@ -49,16 +51,16 @@ export const SiteHeader = () => {
 
                 </div>
             </div>
-            <div className=" pt-3 pr-12 flex items-center">
-                <div className="flex justify-center items-center">
-                    <div className="font-montserrat mt-2  text-yellow-400 text-base font-semibold mr-6 ">{name}</div>
+            <div className="pt-4 pr-2 flex items-center gap-2 lg:pr-12">
+                <div onClick={notifyprob} className="hidden lg:flex lg:justify-center lg:items-center lg:font-semibold lg:text-white">
+                    Welcome!
                 </div>
-                <SignedIn>
-                    <div className="pt-2 ">
-                        <UserButton />
-                    </div>
-                </SignedIn>
+                {/* Drawer for Smaller Screens */}
+                <div className="md:hidden">
+                    <AnchorTemporaryDrawer />
+                </div>
             </div>
+
         </div>
 
     </div>

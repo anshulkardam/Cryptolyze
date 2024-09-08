@@ -14,7 +14,7 @@ export const Selectcoins = ({ crypto1, crypto2, handlecoinChange}) => {
         setFetchedcoins(mycoins)
     }
    
-    return <div className="flex">
+    return <div className="md:flex">
         <div className="flex items-center mr-10">
             <div className="text-white font-montserrat text-lg font-semibold mr-5">Select Crypto 1 :</div>
             <Select

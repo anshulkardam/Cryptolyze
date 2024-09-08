@@ -99,7 +99,7 @@ export const Compare = () => {
 
     return <div className="bg-black min-h-screen">
         <SiteHeader />
-        <div className=" ml-[50px] mt-2 flex justify-start">
+        <div className=" md:ml-[50px] mt-2 md:flex justify-start">
             <Selectcoins crypto1={crypto1} handlecoinChange={handlecoinChange} crypto2={crypto2} />
             <div className="mt-5">
                 <BasicSelect days={days} handledayChange={handledayChange} />

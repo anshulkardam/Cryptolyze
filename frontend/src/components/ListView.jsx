@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const ListView = ({ coin }) => {
     return <tbody>
         <tr className='w-full'>
-            <td className="text-white px-12 pt-10" >
+            <td className="text-white md:px-12 pt-10" >
                 <div className='flex justify-between'>
                     <div className="flex flex-1 ml-12 ">
                         <Link to={`/coin/${coin.id}`} >
@@ -20,8 +20,7 @@ export const ListView = ({ coin }) => {
                             </Link>
                         </div>
                     </div>
-
-                    <div className='flex-1'>
+                    <div className='hidden  md:block md:flex-1'>
                         {coin.price_change_percentage_24h > 0 ?
                             <div className=" flex font-semibold ">
                                 <div className='flex flex-col text-green-500 justify-center'>
@@ -51,14 +50,14 @@ export const ListView = ({ coin }) => {
                         </Tooltip>
                     </div>
                     <Tooltip title="Market Cap" placement="left-start">
-                        <div className=' flex-1 text-xl font-montserrat font-semibold '>
+                        <div className='hidden md:block md:flex-1 text-xl font-montserrat font-semibold '>
 
                             ${coin.market_cap.toLocaleString()}
 
                         </div>
                     </Tooltip>
                     <Tooltip title="Volume" placement="left-start">
-                        <div className='flex-1 font-montserrat font-semibold  text-xl'>
+                        <div className='hidden md:flex-1 font-montserrat font-semibold  text-xl'>
                             ${coin.total_volume.toLocaleString()}
                         </div>
                     </Tooltip>

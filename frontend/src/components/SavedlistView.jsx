@@ -56,21 +56,21 @@ export const SavedlistView = ({ coin }) => {
                             )}
                         </div>
                        
-                        <div   className='flex-1'>
+                        <div   className='hidden md:block md:flex-1'>
                             <Tooltip title="Current Price" placement="left-start">
                                 <div className='text-2xl font-montserrat font-bold text-green-500'>
                                     ${coin.current_price.toLocaleString()}
                                 </div>
                             </Tooltip>
                         </div>
-                        <div   className='flex-1'>
+                        <div   className='hidden md:block md:flex-1'>
                             <Tooltip title="Highest 24Hrs" placement="left-start">
                                 <div className='text-2xl font-montserrat font-semibold text-yellow-500'>
                                     ${coin.high_24h.toLocaleString()}
                                 </div>
                             </Tooltip>
                         </div>
-                        <div   className='flex-1'>
+                        <div   className='hidden md:block md:flex-1'>
                             <Tooltip title="Lowest 24Hrs" placement="left-start">
                                 <div className='text-2xl font-montserrat font-semibold text-yellow-500'>
                                     ${coin.low_24h.toLocaleString()}
@@ -78,7 +78,7 @@ export const SavedlistView = ({ coin }) => {
                             </Tooltip>
                         </div>
                       
-                        <div  className='flex-1' >
+                        <div  className='hidden md:block md:flex-1' >
                             <Tooltip title="Market Cap" placement="left-start">
                                 <div className='text-2xl font-montserrat font-semibold'>
                                     ${coin.market_cap.toLocaleString()}

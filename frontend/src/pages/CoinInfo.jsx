@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import CircularWithValueLabel from "../components/Loader";
-import axios from "axios";
 import { CoinInfoHeader } from "../components/CoinInfoHeader";
 import { SiteHeader } from "../components/SiteHeader";
 import { CoinInfoDesc } from "../components/CoinInfoDesc";
@@ -111,24 +110,43 @@ export const CoinInfo = () => {
         </div>
     }
 
-    // return <div>{coininfo.id}</div>
-    return <div className="bg-black min-h-screen">
-        <SiteHeader />
+   return (
+    <div className="bg-black min-h-screen">
+      {/* Header */}
+      <SiteHeader />
+
+      {/* Coin Info Header */}
+      <div className="overflow-x-auto">
         <table className="w-full">
-            <CoinInfoHeader coin={coininfo} />
+          <CoinInfoHeader coin={coininfo} />
         </table>
-        <div>hi</div>
-        <div className=" pl-[40px] pr-[40px] pt-6">
-            <div className="w-full h-auto bg-grid rounded-xl border-2 border-black p-4">
-                <BasicSelect days={days} handledayChange={handledayChange} />
-                <ChartToggleButton toggle={toggle} handleToggleChange={handleToggleChange} />
-               
-                <div className="">
-                    <Chart chartData={chart} toggle={toggle}/>
-                </div>
-            </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="px-4 md:px-10 lg:px-20 pt-6">
+        <div className="w-full h-auto bg-grid rounded-xl border-2 border-black p-4">
+          {/* Select and Toggle Buttons */}
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0 md:space-x-4">
+            <BasicSelect days={days} handledayChange={handledayChange} />
+            <ChartToggleButton toggle={toggle} handleToggleChange={handleToggleChange} />
+          </div>
+
+          {/* Chart */}
+          <div className="mt-4">
+            <Chart chartData={chart} toggle={toggle} />
+          </div>
         </div>
+      </div>
+
+      {/* Coin Description */}
+      <div className="px-4 md:px-10 lg:px-15 mt-6">
         <CoinInfoDesc coin={coininfo} />
-        <LandingFooter />
-    </div>
-}
+      </div>
+
+      {/* Footer */}
+      <div  className="px-4 md:px-10 lg:px-18 mt-2">
+      <LandingFooter />
+    
+      </div></div>
+  );
+};

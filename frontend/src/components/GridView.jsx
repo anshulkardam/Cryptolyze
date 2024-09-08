@@ -37,7 +37,7 @@ export const GridView = ({ coin }) => {
     };
     return <div className='cursor-pointer'>
 
-        <div className={`text-white w-[400px] h-[300px] hover:h-[310px] hover:w-[410px] bg-grid rounded-2xl border-2 border-black ${coin.price_change_percentage_24h > 0 ? 'hover:border-green-500' : 'hover:border-red-500'}`}>
+        <div className={`text-white w-[350px] h-[300px] md:w-[400px] md:h-[300px] hover:h-[310px] hover:w-[410px] bg-grid rounded-2xl border-2 border-black ${coin.price_change_percentage_24h > 0 ? 'hover:border-green-500' : 'hover:border-red-500'}`}>
             <div className='flex justify-between'>
                 <div className="flex mt-9 ml-8 ">
                     <div className="w-11 h-11 pt-1">

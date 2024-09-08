@@ -9,7 +9,7 @@ export const CoinInfoHeader = ({ coin }) => {
             <td className="text-white px-12 pt-10" >
                 <div className='flex justify-between'>
                     <div className="flex flex-1 ml-6 ">
-                        <div className="w-[75px] h-[75px]">
+                        <div className="w-[55px] h-[55px] md:w-[75px] md:h-[75px]">
                             <img src={coin.image.large} />
                         </div>
                         <div className="flex flex-col pl-4 pt-2">
@@ -47,21 +47,21 @@ export const CoinInfoHeader = ({ coin }) => {
                                 </Tooltip>
                             </div>}
                     </div>
-                    <div className='flex-1 mt-4'>
+                    <div className='hidden md:block md:flex-1 mt-4'>
                         <Tooltip title="Current Price" placement="left-start">
                             <div className=' text-2xl font-montserrat font-bold text-green-500'>
                                 ${coin.market_data.current_price.usd.toLocaleString()}
                             </div>
                         </Tooltip>
                     </div>
-                    <div className='flex-1'>
+                    <div className='hidden md:block md:flex-1'>
                         <Tooltip title="Highest 24Hrs" placement="left-start">
                             <div className=' text-2xl font-montserrat font-semibold mt-4 text-yellow-500'>
                                 ${coin.market_data.high_24h.usd.toLocaleString()}
                             </div>
                         </Tooltip>
                     </div>
-                    <div className='flex-1'>
+                    <div className='hidden md:block md:flex-1'>
                         <Tooltip title="Lowest 24Hrs" placement="left-start">
                             <div className=' text-2xl font-montserrat font-semibold mt-4 text-yellow-500'>
                                 ${coin.market_data.low_24h.usd.toLocaleString()}
@@ -69,14 +69,14 @@ export const CoinInfoHeader = ({ coin }) => {
                         </Tooltip>
                     </div>
                     <Tooltip title="Market Cap" placement="left-start">
-                        <div className=' flex-1 text-2xl font-montserrat font-semibold mt-4'>
+                        <div className=' hidden md:block md:flex-1 text-2xl font-montserrat font-semibold mt-4'>
 
                             ${coin.market_data.market_cap.usd.toLocaleString()}
 
                         </div>
                     </Tooltip>
                     <Tooltip title="Volume" placement="left-start">
-                        <div className='flex-1 font-montserrat font-semibold mt-4 text-2xl'>
+                        <div className='hidden md:flex-1 font-montserrat font-semibold mt-4 text-2xl md:hidden'>
                             ${coin.market_data.total_volume.usd.toLocaleString()}
                         </div>
                     </Tooltip>

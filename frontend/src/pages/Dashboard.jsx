@@ -2,7 +2,6 @@ import { useUser } from "@clerk/clerk-react"
 import LabTabs from "../components/Tabs";
 import { SiteHeader } from "../components/SiteHeader";
 import { useEffect, useState } from "react";
-import axios from 'axios'
 import { SearchBar } from "../components/SearchBar";
 import PaginationComp from "../components/PaginationComp";
 import CircularWithValueLabel from "../components/Loader";

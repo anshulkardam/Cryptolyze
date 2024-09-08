@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
@@ -7,7 +6,7 @@ import Select from '@mui/material/Select';
 export default function BasicSelect({days, handledayChange}) {
 
   return (
-    <div className='flex pb-5 ml-6 items-center'>
+    <div className='flex pb-5 md:ml-6 items-center'>
         <p className='text-white pr-4 font-montserrat font-semibold font-lg'>Change In The Past</p>
         <InputLabel id="demo-simple-select-label"></InputLabel>
         <Select
